@@ -1,0 +1,18 @@
+service: short-url-telegram-bot-aws-lambda
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-west-2
+
+functions:
+  shortbot:
+    handler: handler.handle
+    memorySize: 128
+    environment:
+      TELEGRAM_TOKEN: 'YOUR_TOKEN_HERE'
+    events:
+      - http:
+          path: short-bot
+          method: post
+          cors: true

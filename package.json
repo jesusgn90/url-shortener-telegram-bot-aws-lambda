@@ -1,0 +1,17 @@
+{
+  "name": "short-url-telegram-bot-aws-lambda",
+  "version": "1.0.0",
+  "description": "URL shortener Telegram bot using AWS Lambda",
+  "main": "handler.js",
+  "repository": "https://github.com/jesusgn90/short-url-telegram-bot-aws-lambda",
+  "author": "Jesús Ángel <jesusgonzaleznovez@gmail.com>",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "deploy": "serverless deploy",
+    "remove-lambda": "serverless remove"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
