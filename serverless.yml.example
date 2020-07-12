@@ -5,10 +5,19 @@ provider:
   runtime: nodejs12.x
   region: us-west-2
 
+package:
+  individually: true
+  exclude:
+    - "*"
+
 functions:
   shortbot:
     handler: handler.handle
     memorySize: 128
+    package:
+      include:
+        - handler.js
+        - node_modules
     environment:
       TELEGRAM_TOKEN: 'YOUR_TOKEN_HERE'
     events:
